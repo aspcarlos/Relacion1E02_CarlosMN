@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Relacion1E02_CarlosMN.Ejercicio02"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Ejercicio02"
+    BackgroundColor="Black">
+
+    <!--  Grid: Es un control de diseño que organiza su contenido en una cuadrícula compuesta de filas y columnas  -->
+    <!--  ColumnDefinitions: Define cuántas columnas tendrá el Grid y cómo se distribuye el espacio entre ellas  -->
+    <!--  RowDefinitions: Define cuántas filas tendrá el Grid y cómo se distribuye el espacio entre ellas (en mi caso he añadido 6 filas cuyo tamaño se ajustara automaticamente  -->
+    <!--  RowSpacing: Sirve para añadir una separacion entre filas  -->
+    <Grid
+        Margin="25"
+        ColumnDefinitions="Auto,*"
+        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+        RowSpacing="20"
+        VerticalOptions="Center">
+
+        <!--  Grid.Row: Esta propiedad especifica en qué fila del Grid se debe colocar el elemento. La fila 0 es la primera fila  -->
+        <!--  Grid.Column: Esta propiedad especifica en qué columna del Grid se debe colocar el elemento. La columna 0 es la primera columna  -->
+        <!--  Grid.ColumnSpan: Esta propiedad indica cuántas columnas debe ocupar el elemento en el Grid.  -->
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalTextAlignment="Center"
+            Text="Relación 1: Ejercicio 2"
+            TextColor="#CCCCCC"
+            VerticalOptions="Center" />
+
+        <!--  Nombre  -->
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="15"
+            Text="Introduzca su Nombre"
+            TextColor="#CCCCCC"
+            VerticalTextAlignment="Center" />
+        <Entry
+            x:Name="Nombre"
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="#2A2A2A"
+            HorizontalOptions="FillAndExpand"
+            Keyboard="Text"
+            Placeholder=""
+            PlaceholderColor="#7d7c7c"
+            TextColor="#CCCCCC" />
+
+        <!--  Apellidos  -->
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="15"
+            Text="Introduzca sus Apellidos"
+            TextColor="#CCCCCC"
+            VerticalTextAlignment="Center" />
+        <Entry
+            x:Name="Apellidos"
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#2A2A2A"
+            HorizontalOptions="FillAndExpand"
+            Keyboard="Text"
+            Placeholder=""
+            PlaceholderColor="#7d7c7c"
+            TextColor="#CCCCCC" />
+
+        <!--  Edad  -->
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="15"
+            Text="Introduzca su Edad"
+            TextColor="#CCCCCC"
+            VerticalTextAlignment="Center" />
+        <Entry
+            x:Name="Edad"
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="#2A2A2A"
+            HorizontalOptions="FillAndExpand"
+            Placeholder=""
+            PlaceholderColor="#7d7c7c"
+            TextColor="#CCCCCC" />
+
+        <!--  Botón y Resultado  -->
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            BackgroundColor="#7d7c7c"
+            Clicked="Button_Clicked"
+            FontSize="20"
+            Text="Acceder"
+            TextColor="White" />
+
+        <Label
+            x:Name="lblResultado"
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            FontAttributes="Bold"
+            FontSize="15"
+            HorizontalTextAlignment="Center"
+            Text=""
+            TextColor="#CCCCCC" />
+
+    </Grid>
+</ContentPage>
